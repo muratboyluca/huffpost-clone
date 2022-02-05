@@ -212,49 +212,89 @@ h3 {
   padding: 32px 64px 25px;
 }
 
-.News {
+/* Card */
+
+.card {
+  padding: 0 16px 16px 0;
   width: 100%;
-  flex-grow: 1;
-  padding: 1rem;
-  overflow-y: auto;
-  background-color: #fff;
-  /* display: flex;
-  flex-direction: column; */
+  flex-basis: 50%;
+}
+.card-content {
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  padding: 16px 0 0 16px;
+  flex-wrap: wrap;
 }
 
-.Feed,
+.card .card-image {
+}
+
+.card-image img {
+  width: 100%;
+  aspect-ratio: 400 / 225;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.card-label {
+  font-size: 0.775rem;
+  font-weight: 700;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.card-text-headlines {
+  font-size: 0.75rem;
+  width: 100%;
+  font-weight: 700;
+}
+
+.card-description,
+.card-byline,
+.card-category {
+  display: none;
+}
+
+/* End od Card */
+.News,
 .Entry {
+  width: 100%;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
-  max-width: 1170px;
-  margin: 15px auto;
 }
 
 /* NEWS */
 .News .card {
+  width: 100%;
   display: flex;
   flex-direction: column;
-}
+  margin: 0 auto;
+  text-align: left;
+  padding: 0;
 
-.News .card .card-wrap {
-  width: 100%;
-  width: 770px;
-  display: flex;
-  padding: 32px 32px 32px 0;
-  border-bottom: 1px solid #e0e0e0;
+  /* flex-wrap: wrap; */
 }
 
 .News .card .card-image {
-  width: 353px;
-
-  margin-right: 32px;
+  /* width: 100%; */
 }
 
 .News .card .card-image img {
   width: 100%;
+  aspect-ratio: 400 / 225;
   object-fit: cover;
   object-position: top center;
-  height: 198px;
+}
+
+.News .card-label {
+  display: none;
 }
 
 .News .card .card-text,
@@ -264,7 +304,7 @@ h3 {
 }
 
 .News .card .card-text {
-  width: 353px;
+  width: 100%;
 }
 
 .News .card-description {
@@ -357,55 +397,6 @@ h3 {
   content: "/";
   font-size: 24px;
 }
-
-/* Card */
-
-.card {
-  padding: 0 16px 16px 0;
-  width: 100%;
-  flex-basis: 50%;
-}
-.card-content {
-  width: 100%;
-  margin: 0 auto;
-  text-align: left;
-  display: flex;
-  padding: 16px 0 0 16px;
-  flex-wrap: wrap;
-}
-
-.card .card-image {
-}
-
-.card-image img {
-  width: 100%;
-  aspect-ratio: 352 / 198;
-  object-fit: cover;
-  object-position: top center;
-}
-
-.card-label {
-  font-size: 0.775rem;
-  font-weight: 700;
-  letter-spacing: 0.025rem;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  margin-top: 0;
-}
-
-.card-text-headlines {
-  font-size: 0.75rem;
-  width: 100%;
-  font-weight: 700;
-}
-
-.card-description,
-.card-byline,
-.card-category {
-  display: none;
-}
-
-/* End od Card */
 
 /* SHOPPING */
 
@@ -604,6 +595,15 @@ h3 {
     letter-spacing: 0.43px;
     text-decoration: none;
     text-transform: uppercase;
+  }
+
+  .News,
+  .Feed,
+  .Entry {
+    display: flex;
+    flex-direction: column;
+    max-width: 1170px;
+    /* margin: 15px auto; */
   }
   .row {
     flex-direction: row;

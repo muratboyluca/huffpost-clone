@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 const Card = ({ entry }) => {
   return (
     <div className="card">
-      {/* <article className="card-wrap"> */}
       <Link className="card-image-link" to={`/entry/${entry.id}`}>
         <div className="card-image">
           <img src={entry.image}></img>
@@ -21,7 +20,6 @@ const Card = ({ entry }) => {
         <div className="card-description">{entry.description}</div>
         <div className="card-byline">{`By ${entry.by}`}</div>
       </div>
-      {/* </article> */}
     </div>
   );
 };
