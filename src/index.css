@@ -567,11 +567,30 @@ h3 {
     padding: 0 32px 32px 0;
     flex-basis: 25%;
   }
-
+  /* NEWS */
   .News .card {
     flex-direction: row;
+    padding: 32px 32px 32px 0;
   }
 
+  .News .card .card-image {
+    padding-bottom: 0;
+    margin-right: 32px;
+    width: 308px;
+  }
+
+  .News .card .card-image img {
+    width: 100%;
+    aspect-ratio: 400 / 225;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .News .card-label {
+    display: none;
+  }
+
+  /* END OF NEWS */
   .Shopping .card {
     padding-right: 0;
   }
